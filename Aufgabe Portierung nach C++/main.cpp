@@ -7,7 +7,6 @@ und std::string statt Zeigern und malloc/free.*/
 #inclide Person.h
 
 using namespace std;
-//______________________________________-
 
 #include <stdio.h>
 #include <stdlib.h>
