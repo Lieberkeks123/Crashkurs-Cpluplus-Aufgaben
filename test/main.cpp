@@ -3,13 +3,13 @@
 using namespace std;
 
 template<typename x>
-x addieren(x wert, x wert2){
+x addieren(x wert, x wert2){//Funktion/Methode
     return wert + wert2;
 }
 
 int main()
 {
-    int x, y;
+    int x, y;//Attribute/Variablen
     cout << "Gebe einen ersten ganzzahligen Wert ein: ";
     cin >> x;
     cout << "Gebe einen zweiten ganzzahligen Wert ein: ";
@@ -22,6 +22,5 @@ int main()
     cout << "Gebe einen zweiten reelen Wert ein: ";
     cin >> t;
     cout << "Addiert: " <<  addieren(z,t);
-
     return 0;
 }
