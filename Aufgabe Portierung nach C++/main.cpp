@@ -4,20 +4,16 @@ privaten Attributen und getter-Methoden, cout statt printf, Methoden statt Funkt
 und std::string statt Zeigern und malloc/free.*/
 
 #include <iostream>
-#inclide Person.h
+#include "Person.h"
+#include "Person.cpp"
 
 using namespace std;
-//______________________________________-
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int main()
 {
-	struct Person p;
-	initPerson(&p, "Michael", "Wendler");
-	setLastName(&p, "Skowronek");
-	printf("Die Person heisst %s %s\n", p.firstname, p.lastname);
-	freePerson(&p);
+	Person("Michael", " Wendler");
+	cout << "Die Person heisst " << endl  << getFirstName() << getLastName();
+    //setLastName("Skowronek");
+	//setLastName("Skowronek");
+	//freePerson(&p);
 }
