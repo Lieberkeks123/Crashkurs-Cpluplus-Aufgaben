@@ -9,6 +9,10 @@ und std::string statt Zeigern und malloc/free.*/
 
 using namespace std;
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main()
 {
 	Person("Michael", " Wendler");
