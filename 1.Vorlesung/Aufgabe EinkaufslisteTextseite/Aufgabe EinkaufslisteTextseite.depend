@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1585756195 source:c:\users\micha\desktop\c++ crashkurs (sose20)\projekte\crashkurs-cpluplus-aufgaben\aufgabe einkaufslistetextseite\main.cpp
+	"shoppinglist.h"
+	<iostream>
+
+1585755393 c:\users\micha\desktop\c++ crashkurs (sose20)\projekte\crashkurs-cpluplus-aufgaben\aufgabe einkaufslistetextseite\shoppinglist.h
+	<string>
+
+1585756119 source:c:\users\micha\desktop\c++ crashkurs (sose20)\projekte\crashkurs-cpluplus-aufgaben\aufgabe einkaufslistetextseite\shoppinglist.cpp
+	<iostream>
+	"shoppinglist.h"
+

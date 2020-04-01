@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1585754157 source:c:\users\micha\desktop\c++ crashkurs (sose20)\projekte\crashkurs-cpluplus-aufgaben\aufgabe portierung nach c++\main.cpp
+	<string>
+	<iostream>
+	"Person.h"
+
+1585754176 c:\users\micha\desktop\c++ crashkurs (sose20)\projekte\crashkurs-cpluplus-aufgaben\aufgabe portierung nach c++\person.h
+
