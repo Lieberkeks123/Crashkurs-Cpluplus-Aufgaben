@@ -1,0 +1,37 @@
+1. Aufgabe Vererbung
+
+#include <string>
+
+class Shape
+{
+public:
+	Shape()
+	{ }
+	virtual ~Shape()
+	{ }
+
+	virtual std::string name() const = 0;
+	virtual double circumfence() const = 0;
+	virtual double area() const = 0;
+};
+
+a) Was passiert, wenn Sie ein Objekt der Klasse Shape erzeugen? Begründen Sie das Verhalten.
+
+b) Schreiben Sie Klassen Rectangle und Circle, welche von Shape erben, die virtuellen 
+Methoden überladen und diese sinnvoll implementieren. Ein Rechteck sollte mindestens Länge 
+und Breite halten, ein Kreis seinen Radius. Als Name sollen "rectangle" und "circle" 
+zurückgegeben werden.
+
+c) Schreiben Sie eine Funktion
+void print(Shape const& shape)
+
+welche zu einem Shape-Objekt Name, Umfang und Flächeninhalt ausgibt. Testen Sie die Funktion 
+mit Rechtecken und Kreisen.
+
+d) Erstellen Sie ein Array Shape* array[5];, welches 5 Zeiger auf Rechtecke und Kreise 
+hält. Erstellen Sie zwei Rechtecke und drei Kreise in dynamischem Speicher, die Sie im 
+Array speichern. Implementieren Sie dann die Destruktoren aller drei Klassen. Im Destruktor 
+geben Sie jeweils den Klassennamen aus. Geben Sie am Ende des Programms die fünf Objekte in
+einer Schleife mit delete frei. Entfernen Sie zum Vergleich das Schlüsselwort virtual aus 
+dem Destruktor ~Shape. Wie ändert sich die Ausgabe und warum? Welches Problem kann sich 
+hier ergeben?

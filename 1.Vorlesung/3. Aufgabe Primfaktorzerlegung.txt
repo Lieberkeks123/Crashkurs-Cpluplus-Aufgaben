@@ -1,0 +1,37 @@
+Aufgabe: Primfaktorzerlegung
+Schreiben Sie eine Funktion void decompose(unsigned int n), die als Argument eine positive 
+ganze Zahl erwartet. Prüfen Sie, ob die übergebene Zahl positiv ist. Das Programm zerlegt 
+die Zahl in Primfaktoren und gibt die Primfaktorzerlegung auf der Konsole aus. Beispiel:
+
+decompose(1);
+decompose(42);
+decompose(1001);
+
+soll die Ausgabe
+
+1 = 1
+42 = 2 * 3 * 7
+1001 = 7 * 11 * 13
+
+erzeugen. Verwenden Sie den folgenden Algorithmus zum Finden der Primfaktoren 
+(hier als Pseudo-Code):
+
+handle cases n=0 and n=1
+factor = 2
+while n > 1 do
+  if n is divisible by factor then
+    // factor is a prime factor of n
+    n /= factor
+  else
+    increment factor
+  end if
+end while
+
+Zu dem Algorithmus müssen Sie natürlich noch die korrekt formatierte Ausgabe hinzufügen.
+
+Ändern Sie den Algorithmus so, dass er gleiche Primfaktoren zu Potenzen zusammenfasst. 
+Beispiel:
+
+32 = 2^5
+60 = 2^2 * 3 * 5
+1500 = 2^2 * 3 * 5^3

@@ -1,0 +1,38 @@
+Aufgabe: Einkaufsliste
+Gegeben ist das folgende Gerüst für die Klasse ShoppingList. Diese Aufgabe sollte Ihnen 
+aus der Vorlesung "Informatik 1" bekannt vorkommen.
+
+class ShoppingList
+{
+public:
+	ShoppingList();
+	~ShoppingList();
+
+	bool empty();                             // is the list empty?
+	unsigned int size();                      // number of different items
+	std::string item(unsigned int index);     // item type/name
+	unsigned int count(unsigned int index);   // number of items of that type/name
+
+	void add(std::string item, unsigned int count = 1);
+
+private:
+	struct Entry
+	{
+		std::string item;
+		unsigned int count;
+	};
+};
+
+a. Erzeugen Sie ein Projekt, bestehend aus einer Datei main.cpp, welche die Main-Funktion 
+enthält, sowie shoppinglist.h und shoppinglist.cpp für die Klasse. Setzen Sie include guards 
+und binden Sie die notwendiger Header-Dateien ein.
+
+b. Ergänzen Sie private Attribute und ggf. Methoden, und implementieren Sie die gesamte 
+Klasse. Nutzen Sie dazu dynamischen Speicher, den Sie mit new anfordern und mit delete 
+löschen. Die Einträge der Einkaufsliste werden in einem dynamischen Arrays des Typs Entry 
+verwaltet. Bei Bedarf wächst das Array zur Laufzeit. Achten Sie darauf, den Speicher im 
+Destruktor wieder freizugeben.
+
+c. Erstellen Sie ein Objekt der Klasse ShoppingList, fügen Sie eine Reihe unterschiedlicher 
+Artikel sowie einige gleichartige Artikel hinzu und geben Sie die resultierende 
+Einkaufsliste aus. Testen Sie die Klasse gut, indem Sie mehrere Testfälle durchgehen,

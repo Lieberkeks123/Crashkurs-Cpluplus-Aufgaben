@@ -1,0 +1,7 @@
+Aufgabe: Einkaufsliste Teil 2
+
+Schreiben Sie die Klasse ShoppingList aus Einheit 1 um. Machen Sie das Programm const-korrekt.
+Ersetzen Sie so viele Werte wie möglich durch Referenzen, außer diese sind "primitive" 
+Datentypen wie unsigned int(keine Klassen). Machen Sie so viele Referenzen und Methoden 
+wie möglich const. Ersetzen Sie weiterhin so viele explizite Datentypen wie möglich durch 
+auto.

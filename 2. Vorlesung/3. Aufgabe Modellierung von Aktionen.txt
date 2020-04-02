@@ -1,0 +1,83 @@
+Aufgabe: Modellierung von Aktionen
+
+Gegeben ist das folgende (unfertige) Programm.
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Action
+{
+public:
+	Action() { }
+	virtual ~Action() { }
+
+	virtual void perform(std::string& text) = 0;
+	virtual void revert(std::string& text) = 0;
+};
+
+class InsertAction : public Action
+{
+public:
+	InsertAction(unsigned int position, std::string const& s)
+};
+
+class OverwriteAction : public Action
+{
+public:
+	OverwriteAction(unsigned int position, std::string const& s)
+};
+
+class DeleteAction : public Action
+{
+public:
+	DeleteAction(unsigned int position, unsigned int length)
+};
+
+int main()
+{
+	std::string text;
+
+	// create sequence of actions
+	Action* a[3];
+	a[0] = new InsertAction(0, "Hallo, World!");
+	a[1] = new OverwriteAction(1, "e");
+	a[2] = new DeleteAction(5, 1);
+
+	// perform actions
+	for (int i=0; i<3; i++)
+	{
+		a[i]->perform(text);
+		std::cout << text << std::endl;
+	}
+
+	// undo actions (in reverse order)
+	for (int i=2; i>=0; i--)
+	{
+		a[i]->revert(text);
+		std::cout << text << std::endl;
+	}
+
+	// redo actions
+	for (int i=0; i<3; i++)
+	{
+		a[i]->perform(text);
+		std::cout << text << std::endl;
+	}
+
+	// clean up
+	for (int i=0; i<3; i++) delete a[i];
+}
+
+Die Klasse Action repräsentiert eine Bearbeitungs-Aktion auf einem Text (string). Aktionen 
+können ausgeführt und rückgängig gemacht werden.
+
+a. Implementieren Sie die drei Unterklassen. Nutzen Sie dazu die Methoden size, insert, erase 
+und replace der Klasse std::string.
+
+b. Was passiert, wenn die rein virtuellen Methoden der Klasse Action eine leere Implementierung 
+bekommen, und warum?
+
+c. Was passiert, wenn die virtuellen Methoden der Klasse Action nicht virtuell sind, und warum?
